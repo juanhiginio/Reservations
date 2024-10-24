@@ -14,7 +14,7 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    height: 100dvh;
+    min-height: 100dvh;
 }
 
 .titulo-seccion {

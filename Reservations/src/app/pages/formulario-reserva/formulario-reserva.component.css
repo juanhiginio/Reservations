@@ -1,0 +1,45 @@
+@import url(../../../assets/formulariosRegistro.css);
+
+.form-details #Detalles {
+    width: 60%;
+    height: 200px;
+}
+
+@media screen and (max-width: 1300px){
+
+    .modal-registro {
+        width: 90%;
+        height: 83vh;
+        position: fixed;
+    }
+
+    .modal-registro .form-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 890px){
+
+    .modal-registro {
+        width: 99%;
+        height: 98.5%;
+        position: fixed;
+    }
+
+    .modal-registro .form-items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.6rem;
+    }
+
+    .modal-registro form input[type=text] {
+        width: 95%;
+    }
+
+    .form-details #Detalles {
+        width: 95%;
+        height: 13rem;
+    }
+}

@@ -13,8 +13,11 @@
         <input type="text" name="Buscar" placeholder="Buscar..." id="Label_Buscar" />
 
       </div>
-
-      <a class="logo" href="#" target="_self"><img class="logousuario" src="/usuario1.png" alt="login" /></a>
+      
+      @if (name.length !== 0) {
+        <p>Hola, {{ name }}</p>
+      }
+      <a class="logo" routerLink="login" target="_self"><img class="logousuario" src="/usuario1.png" alt="login" /></a>
 
     </div>
 

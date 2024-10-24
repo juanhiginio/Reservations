@@ -1,6 +1,15 @@
 <body>
-<app-header />
-    <router-outlet /> 
-<app-footer />
+    @if (showHeader()) {
+        <app-header />
+    }
+
+    <div class="contenedor-contenido">
+        <router-outlet /> 
+    </div>
+
+    @if (showFooter()) {
+        <app-footer />
+    }
+
 </body>
 

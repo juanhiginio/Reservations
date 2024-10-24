@@ -1,11 +1,11 @@
 <div class="contenedor-seccion-cards-principal">
 
-    <h1 class="titulo-seccion">BARBERIAS</h1>
+    <h1 class="titulo-seccion">Negocios Disponibles</h1>
 
     <div class="seccion-cards">
 
         <div>
-            <select name="categoria" id="categoria" class="select-categoria">
+            <select (change)="handleSelectChange($event)" [formControl]="categorySelect" name="categoria" id="categoria" class="select-categoria">
 
                 <img src="./public/images/iconoFiltro.svg" alt="Icono Filtro" class="iconoFiltro">
 
@@ -22,12 +22,16 @@
         <div class="cards">
 
             <!-- Componete Card -->
-             <app-card />
-             <app-card />
-             <app-card />
-             <app-card />
-             <app-card />
-             <app-card />
+             @for( item of business(); track item._id ) {
+
+                <app-card
+                    [id]="item._id"
+                    [businessLogo]="'http://localhost:3000/uploads/' + item.businessLogo"
+                    [name]="item.name"
+                    [slogan]="item.slogan" 
+                />
+
+             }
 
         </div>
 

@@ -14,6 +14,10 @@
   background-color: #ff8811;
 }
 
+.button {
+  cursor: pointer;
+}
+
 /*  1 SECTION  */
 
 .Section_1 {
@@ -59,8 +63,9 @@ button {
 
 .Section_2 {
   display: grid;
-  grid-template-columns: 100px 1fr 1fr 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 20px;
+  padding: 35px;
 }
 
 .img_spa {
@@ -127,9 +132,15 @@ h2 {
 
 .Section_3 {
   display: grid;
-  grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
   margin-bottom: 100px;
 }
+
+.masPopulares {
+  margin: 0 auto;
+}
+
 .mostPopularImg {
   height: auto;
   padding: 7%;

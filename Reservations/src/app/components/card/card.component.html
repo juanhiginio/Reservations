@@ -1,11 +1,13 @@
 <div class="card">
     <div class="contenedor-imagen-card">
-        <img src="./public/images/elLeñador.svg" alt="Logo El Leñador">
+        <img [src]="businessLogo" alt="Logo">
     </div>
     <div class="contenedor-informacion-card">
-        <h1>El Leñador</h1>
-        <p>Potencia tu estilo resaltando tus cualidades con un buen corte </p>
+        <h1>{{ name }}</h1>
+        <p>{{ slogan || "Sin Slogan" }}</p>
     </div>
 
-    <button>Mostrar Más...</button>
+    <a routerLink="{{ '/business/' + id }}">
+        <button>Mostrar Más...</button>
+    </a>
 </div>

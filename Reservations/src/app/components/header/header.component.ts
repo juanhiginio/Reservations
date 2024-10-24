@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkWithHref } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,10 @@ import { Router, RouterLink, RouterLinkWithHref } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
+
 export class HeaderComponent {
+  
+  private authService = inject(AuthService);
+  name = this.authService.nombreUsuario();
 
 }
