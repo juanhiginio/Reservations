@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DetalleNegocioComponent } from './pages/detalle-negocio/detalle-negocio.component';
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
+import { TusReservasComponent } from './pages/tus-reservas/tus-reservas.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent,  },
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'business/:id', component: DetalleNegocioComponent},
-    { path: 'reserva', component: FormularioReservaComponent }
+    { path: 'reserva/:id', component: FormularioReservaComponent },
+    { path: 'tusReservas', component:TusReservasComponent  }
 ];

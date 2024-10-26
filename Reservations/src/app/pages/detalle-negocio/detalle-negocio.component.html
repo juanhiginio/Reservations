@@ -29,7 +29,7 @@
                   <li class="list price">{{ service.price | currency }}</li>
                 </ul>
         
-                <button routerLink="/reserva" class="buttonReservation">Reservar</button>
+                <button [routerLink]="'/reserva/' + service._id" class="buttonReservation">Reservar</button>
               </div>
               
             }

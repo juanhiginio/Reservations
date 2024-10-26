@@ -187,7 +187,7 @@ h2 {
   }
   .Section_2 {
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-columns: 1fr 1fr;
     margin-top: 20px;
   }
   .Illustration_image {
@@ -203,7 +203,7 @@ h2 {
   }
   .Section_3 {
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 1fr 100px;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 100px;
   }
   .mostPopularImg5{
@@ -262,7 +262,7 @@ h2 {
   }
   .Section_2 {
     display: grid;
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: 1fr;
     margin-top: 20px;
   }
   .categoryPhotoSession {
@@ -270,7 +270,7 @@ h2 {
   }
   .Section_3 {
     display: grid;
-    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 100px;
   }
   .mostPopularImg3{
