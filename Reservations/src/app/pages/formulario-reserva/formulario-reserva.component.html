@@ -21,6 +21,9 @@
       <button (click)="onSubmit()" type="submit">
           <span>Reservar</span>
       </button>
+      <small>
+        {{error() !== "" ? error() : ""}}
+    </small>
   </div>
   </div>
 </main>
