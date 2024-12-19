@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,12 +8,13 @@ import { inject, Injectable } from '@angular/core';
 export class BusinessService {
 
   private http = inject(HttpClient)
+  private apiUrl = environment.apiUrl;
 
   constructor() { }
 
   businessList(category?: string) {
 
-    let endpoint = "http://localhost:3000/api/business";
+    let endpoint = `${this.apiUrl}/api/business`;
     if (category) {
       endpoint+="?category=" + category;
     }
@@ -21,16 +23,16 @@ export class BusinessService {
   }
 
   getAllBusiness() {
-    return this.http.get('http://localhost:3000/api/business');
+    return this.http.get(`${this.apiUrl}/api/business`);
   }
   
   getOneBusiness(businessId: string) {
-    return this.http.get('http://localhost:3000/api/business/' + businessId, );
+    return this.http.get(`${this.apiUrl}/api/business/` + businessId, );
   }
 
   create(newBusiness: any) {
     return this.http.post(
-      'http://localhost:3000/api/business',
+      `${this.apiUrl}/api/business`,
       newBusiness,
       {
         headers: new HttpHeaders({
