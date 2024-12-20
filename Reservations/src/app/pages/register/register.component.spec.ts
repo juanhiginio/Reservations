@@ -100,7 +100,7 @@ it('manejo de errores si los campos son invalidos ', () => {
 it('Muestra un error si los campos no son correctos', () => {
   console.log = jasmine.createSpy('log');
   component.onSubmit();
-  expect(console.log).toHaveBeenCalledWith('Campos no Válidos');
+  expect(console.log).toHaveBeenCalledWith('Campos no válidos');
 });
 });
 
