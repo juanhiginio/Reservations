@@ -3,6 +3,7 @@ import { CardComponent } from '../../components/card/card.component';
 import { BusinessService } from '../../services/business.service';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Business } from '../../models/business.model';
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class CardsPageComponent {
   private businessService = inject(BusinessService);
   categorySelect = new FormControl("");
   business = signal<null | Business[]>(null);
+  public apiUrl = environment.apiUrl;
 
   ngOnInit() {
     this.businessService.businessList().subscribe(

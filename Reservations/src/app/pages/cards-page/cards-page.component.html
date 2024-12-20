@@ -26,7 +26,7 @@
 
                 <app-card
                     [id]="item._id"
-                    [businessLogo]="'http://localhost:3000/uploads/' + item.businessLogo"
+                    [businessLogo]=" apiUrl + '/uploads/' + item.businessLogo"
                     [name]="item.name"
                     [slogan]="item.slogan" 
                 />

@@ -38,7 +38,8 @@ describe('BusinessService Test', () => {
 
   it('debería hacer una llamada GET al endpoint /api/business con categoría y devolver la lista de negocios filtrados', () => {
     
-    service.businessList(`Technology`).subscribe((response) => {
+    service.businessList(`Technology`).subscribe(
+      (response) => {
       expect(response).toEqual([mockBusiness]);
     });
   

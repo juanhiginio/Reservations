@@ -3,6 +3,7 @@ import { Business } from '../../models/business.model';import { BusinessService 
 import { RouterLinkWithHref } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
 import { FormServiceService } from '../../services/form-service.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-detalle-negocio',
@@ -13,7 +14,7 @@ import { FormServiceService } from '../../services/form-service.service';
 })
 
 export class DetalleNegocioComponent {
-
+  public apiUrl = environment.apiUrl;
   private formService = inject(FormServiceService);
 
   businessService = inject(BusinessService);
