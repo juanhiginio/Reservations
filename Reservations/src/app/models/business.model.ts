@@ -8,6 +8,6 @@ export interface Business {
     phone: string;
     services: any;
     email: string;
-    businessLogo: string; 
+    businessLogo: string;
 
 }
